@@ -6,14 +6,14 @@ import time
 
 import grpc
 
-import dict_add_pb2
-import dict_add_pb2_grpc
+from proto import dict_add_pb2
+from proto import dict_add_pb2_grpc
 from google.protobuf import struct_pb2
 
-avaluo = {'origin': 'fovissste','banos':None}
+avaluo = {'origin': 'Google','banos':None, 'floors': 1}
 
 st=struct_pb2.Struct()
-for key in avaluo.iterkeys():
+for key in avaluo.keys():
     st[key]=avaluo[key]
 
 channel = grpc.insecure_channel('localhost:50003')
