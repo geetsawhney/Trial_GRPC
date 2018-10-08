@@ -1,0 +1,7 @@
+version: '2'
+
+services:
+  dict_add:
+    build: .
+    ports:
+      - "50051:50051"
